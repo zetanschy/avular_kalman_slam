@@ -1,4 +1,4 @@
-# Tarea: Navegación Autónoma con Robot de Delivery en PUCP
+# Tarea: Navegación con Robot de Delivery en PUCP
 
 <img src="media/hwx40.gif" alt="demo" />
 
