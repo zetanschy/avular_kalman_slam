@@ -60,7 +60,7 @@ En anteriores clases, aprendimos cómo seguir waypoints usando control directo. 
    - En las líneas 235-243, el script envía un goal al action server con una lista de PoseStamped y un callback de feedback. ¿Qué información proporciona el feedback_callback durante la ejecución? ¿Por qué es útil tener feedback en tiempo real cuando el robot está siguiendo múltiples waypoints en una ruta de entregas?
 
 **Archivos relevantes**:
-- `scripts/gps_waypoint_follower.py` - Script a completar
+- `scripts/gps_waypoint_follower.py`
 - `config/pucp_waypoints.yaml` - Waypoints GPS definidos
 
 #### Tarea 1.2: Localización con Solo Wheel Odometry
