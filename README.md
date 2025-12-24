@@ -153,3 +153,13 @@ El campus PUCP está en proceso de reconstrucción y necesitas crear un mapa act
    ```bash
    ros2 run nav2_map_server map_saver_cli -f my_map
    ```
+---
+
+### Entregables: 
+Entregar comprimido en un archivo zip:
+
+- Mapa generado en formato pgm o png.
+
+- Archivos de configuración ekf y dual_ekf.yaml
+
+- Readme con respuestas a las preguntas de análisis.
