@@ -1,0 +1,25 @@
+# GPS Waypoints around PUCP (Pontificia Universidad Católica del Perú)
+# Coordinates in WGS84 format (latitude, longitude)
+# Yaw is in radians (0.0 = North, 1.57 = East, 3.14 = South, 4.71 = West)
+
+waypoints:
+  # Pucp Entrance: Starting Point
+  - latitude: -12.0690
+    longitude: -77.0784
+    yaw: 0.0
+
+  # Waypoint Mcgregor
+  - latitude: -12.0686
+    longitude: -77.0786
+    yaw: 0.0
+
+  # Waypoint PUCPCraft
+  - latitude: -12.0685
+    longitude: -77.0785
+    yaw: 0.0
+
+  # Pucp Entrance: Final Point
+  - latitude: -12.0690
+    longitude: -77.0784
+    yaw: 0.0
+

@@ -1,0 +1,28 @@
+ekf_filter_node_map:
+  ros__parameters:
+    use_sim_time: True
+    frequency: 30.0
+    two_d_mode: true  # Recommended to use 2d mode for nav2 in mostly planar environments
+    print_diagnostics: true
+    debug: false
+    publish_tf: true
+
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_link
+    world_frame: map
+
+    # Wheel odometry for velocity and orientation in map frame
+    odom0: #COMPLETAR
+    odom0_config: #COMPLETAR
+    odom0_queue_size: 10
+    odom0_nodelay: false
+    odom0_differential: false
+    odom0_relative: false
+
+    # IMU for orientation
+    imu0: #COMPLETAR
+    imu0_config: #COMPLETAR
+    imu0_differential: false
+    imu0_relative: false
+    imu0_queue_size: 10

@@ -1,0 +1,74 @@
+ekf_filter_node_odom:
+  ros__parameters:
+    use_sim_time: True
+    frequency: 30.0
+    two_d_mode: true  # Recommended to use 2d mode for nav2 in mostly planar environments
+    print_diagnostics: true
+    debug: false
+    publish_tf: true
+
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_link
+    world_frame: odom
+
+    # Wheel odometry for position, velocity, and orientation in odom frame
+    odom0: #COMPLETAR
+    odom0_config:  #COMPLETAR
+    odom0_queue_size: 10
+    odom0_nodelay: false
+    odom0_differential: false
+    odom0_relative: false
+
+    # IMU for orientation and angular velocity (complementary to wheel odometry)
+    imu0:  #COMPLETAR
+    imu0_config:  #COMPLETAR
+    imu0_differential: false
+    imu0_relative: false
+    imu0_queue_size: 10
+
+ekf_filter_node_map:
+  ros__parameters:
+    use_sim_time: True
+    frequency: 30.0
+    two_d_mode: true  # Recommended to use 2d mode for nav2 in mostly planar environments
+    print_diagnostics: true
+    debug: false
+    publish_tf: true
+
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_link
+    world_frame: map
+
+    # Wheel odometry from odom frame EKF (filtered wheel odometry + IMU) - provides yaw and velocities
+    odom0: #COMPLETAR
+    odom0_config: #COMPLETAR
+    odom0_queue_size: 10
+    odom0_nodelay: false
+    odom0_differential: false
+    odom0_relative: false
+
+    # IMU for orientation in map frame (complementary to filtered odometry)
+    imu0: #COMPLETAR
+    imu0_config:  #COMPLETAR
+    imu0_differential: false
+    imu0_relative: false
+    imu0_queue_size: 10
+
+    # GPS odometry (from navsat_transform_node) - provides position in map frame
+    odom1: #COMPLETAR
+
+navsat_transform:
+  ros__parameters:
+    use_sim_time: True
+    frequency: 30.0
+    delay: 3.0
+    magnetic_declination_radians: 0.0
+    yaw_offset: 0.0
+    zero_altitude: true
+    broadcast_cartesian_transform: true
+    publish_filtered_gps: true
+    use_odometry_yaw: true  # Use yaw from odom EKF (wheel odometry + IMU filtered)
+    wait_for_datum: false
+
